@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+dist/
+.vs/
+.idea/
+*.user
+*.log
+*.sav
+*.dll
+*.pdb
+.env*

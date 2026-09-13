@@ -1,0 +1,9 @@
+Conv_StringToName|28|InString:0:16|ReturnValue:16:12
+GetPlayerController|24|WorldContextObject:0:8|PlayerIndex:8:4|ReturnValue:16:8
+StartCameraFade|32|FromAlpha:0:4|ToAlpha:4:4|Duration:8:4|Color:12:16|bShouldFadeAudio:28:1|bHoldWhenFinished:29:1
+GetCurrentWorld|8|ReturnValue:0:8
+GetButtonsVisibility|1|ReturnValue:0:1
+SetButtonsVisibility|1|NewButtonsVisibility:0:1
+GetLevelChangeData|16|InWorld:0:8|ReturnValue:8:8
+QuickLoadSaveAfterFadeToBlack|0
+IsVisible|1|ReturnValue:0:1

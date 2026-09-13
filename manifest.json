@@ -1,0 +1,8 @@
+{
+  "uniqueId": "OblivionMenuSkip",
+  "version": "0.1.0",
+  "name": "Oblivion Menu Skip",
+  "author": "QueenlyDonkey",
+  "description": "Automatically loads the ReadyM server starter after the native main menu is ready.",
+  "dependencies": []
+}

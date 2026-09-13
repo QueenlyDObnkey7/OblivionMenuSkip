@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Version>0.1.0</Version>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <DebugType>none</DebugType>
+    <PathMap>$(MSBuildProjectDirectory)=/_/Client</PathMap>
+    <ReadyMClientDir Condition="'$(ReadyMClientDir)' == ''">$(APPDATA)/ReadyM.Launcher/Oblivion/Mods/OblivionMp/dlls</ReadyMClientDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ReadyM.Api"><HintPath>$(ReadyMClientDir)/ReadyM.Api.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="ReadyM.Modloader"><HintPath>$(ReadyMClientDir)/ReadyM.Modloader.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="ReadyM.Sdk.Common"><HintPath>$(ReadyMClientDir)/ReadyM.Sdk.Common.dll</HintPath><Private>false</Private></Reference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.8" ExcludeAssets="runtime" />
+    <EmbeddedResource Include="Native.tsv" LogicalName="OblivionMenuSkip.Native.tsv" />
+  </ItemGroup>
+  <Target Name="CheckReadyMReferences" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(ReadyMClientDir)/ReadyM.Modloader.dll')" Text="Set ReadyMClientDir to the ReadyM client dlls directory, or use BUILD.ps1 -SdkDirectory." />
+  </Target>
+</Project>
