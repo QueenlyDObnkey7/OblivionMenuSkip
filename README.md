@@ -2,7 +2,6 @@
 
 A small C# mod for **Oblivion Remastered through ReadyM / OBMP**. After ReadyM connects and the native main menu is ready, it fades the menu out and automatically loads ReadyM's supplied `world.sav`. Players do not need to click Continue, New, or Load.
 
-This package contains only automatic main-menu entry. It has no character selection, character creation, custom spawn location, teleport commands, account database, or character-save system. ReadyM remains responsible for authentication, the starter save, player restoration, and gameplay.
 
 ## Install on a ReadyM server
 
